@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Alex Johnson",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "alex.johnson@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "We studied Computer Science together at university. We used to work on coding projects and attend tech events together.",
+    "goal": 14,
+    "next_due_date": "2026-04-05"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Williams",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "sarah.williams@gmail.com",
+    "days_since_contact": 10,
+    "status": "almost due",
+    "tags": ["work", "team"],
+    "bio": "Worked together on several product launches at our previous company. She is very supportive and creative.",
+    "goal": 14,
+    "next_due_date": "2026-04-17"
+  },
+  {
+    "id": 3,
+    "name": "Michael Brown",
+    "picture": "https://randomuser.me/api/portraits/men/76.jpg",
+    "email": "michael.brown@gmail.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["gym", "health"],
+    "bio": "Met at the gym two years ago. We regularly motivate each other to stay consistent with workouts.",
+    "goal": 14,
+    "next_due_date": "2026-04-25"
+  },
+  {
+    "id": 4,
+    "name": "Emily Davis",
+    "picture": "https://randomuser.me/api/portraits/women/65.jpg",
+    "email": "emily.davis@gmail.com",
+    "days_since_contact": 22,
+    "status": "overdue",
+    "tags": ["school", "best friend"],
+    "bio": "We have been friends since high school. We share memories from school trips and competitions.",
+    "goal": 14,
+    "next_due_date": "2026-04-01"
+  },
+  {
+    "id": 5,
+    "name": "Daniel Wilson",
+    "picture": "https://randomuser.me/api/portraits/men/41.jpg",
+    "email": "daniel.wilson@gmail.com",
+    "days_since_contact": 12,
+    "status": "almost due",
+    "tags": ["business", "network"],
+    "bio": "Met during a startup networking event. We often discuss business ideas and collaboration opportunities.",
+    "goal": 14,
+    "next_due_date": "2026-04-15"
+  },
+  {
+    "id": 6,
+    "name": "Sophia Martinez",
+    "picture": "https://randomuser.me/api/portraits/women/12.jpg",
+    "email": "sophia.martinez@gmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["travel", "friend"],
+    "bio": "Met during a group trip to Thailand. We enjoy planning future travel experiences together.",
+    "goal": 14,
+    "next_due_date": "2026-04-27"
+  },
+  {
+    "id": 7,
+    "name": "James Anderson",
+    "picture": "https://randomuser.me/api/portraits/men/55.jpg",
+    "email": "james.anderson@gmail.com",
+    "days_since_contact": 16,
+    "status": "overdue",
+    "tags": ["football", "club"],
+    "bio": "We played football together in a local club. Still try to meet on weekends when possible.",
+    "goal": 14,
+    "next_due_date": "2026-04-08"
+  },
+  {
+    "id": 8,
+    "name": "Olivia Taylor",
+    "picture": "https://randomuser.me/api/portraits/women/29.jpg",
+    "email": "olivia.taylor@gmail.com",
+    "days_since_contact": 7,
+    "status": "on-track",
+    "tags": ["design", "creative"],
+    "bio": "Met during a UI/UX workshop. We often exchange ideas about design trends and projects.",
+    "goal": 14,
+    "next_due_date": "2026-04-21"
+  }
+]
