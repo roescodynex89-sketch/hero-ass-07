@@ -1,7 +1,6 @@
-
 import AllCard from "./components/AllCard";
 import Banner from "./components/Banner";
-import Summary from "./components/Summary"
+import Summary from "./components/Summary";
 const getFriends = async () => {
   const res = await fetch("http://localhost:3000/data.json", {
     cache: "no-store",
@@ -14,13 +13,11 @@ const page = async () => {
   return (
     <main>
       <Banner></Banner>
-<Summary></Summary>
+      <Summary></Summary>
 
-
-<div>
-  
-      <AllCard friends={friends} />
-</div>
+      <div>
+        <AllCard friends={friends} />
+      </div>
     </main>
   );
 };
