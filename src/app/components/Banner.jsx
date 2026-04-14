@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <section className="py-12 px-6">
       <div className="max-w-7xl mx-auto text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+        <h1 className="text-5xl md:text-5xl font-bold text-gray-800 mb-4">
           Friends to keep close in your life
         </h1>
         <p className="text-gray-500 max-w-2xl mx-auto mb-8 text-sm md:text-base">

@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-emerald-800 text-white py-12 px-6">
       <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
-        {/* Logo and Name */}
+        {/* Logo-png */}
         <div className="flex items-center gap-3 mb-4">
           <Image
             src={FooterImg}
@@ -18,15 +18,14 @@ const Footer = () => {
           />
         </div>
 
-        {/* Tagline */}
         <p className="text-gray-300 max-w-xl mb-8 text-sm md:text-base">
           Your personal shelf of meaningful connections. Browse, tend, and
           nurture the relationships that matter most.
         </p>
 
-        {/* Social Links */}
+        {/*  Links */}
         <div className="mb-12">
-          <h3 className="text-sm font-semibold uppercase tracking-widest mb-4 text-gray-400">
+          <h3 className="text-sm font-semibold uppercase  mb-4 text-white">
             Social Links
           </h3>
           <div className="flex gap-4">
@@ -42,7 +41,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="w-full border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
           <p>© 2026 KeenKeeper. All rights reserved.</p>
           <div className="flex gap-6">
