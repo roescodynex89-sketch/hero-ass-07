@@ -22,7 +22,7 @@ export default function FriendDetails({ params }) {
   const [loading, setLoading] = useState(true);
   // api call
   useEffect(() => {
-    fetch("http://localhost:3000/data.json")
+    fetch("/data.json")
       .then((res) => res.json())
       .then((data) => {
         const found = data.find((f) => f.id == id);
