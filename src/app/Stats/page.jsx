@@ -1,13 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import {
-  PieChart,
-  Pie,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
+import { PieChart, Pie, Tooltip, Legend, ResponsiveContainer } from "recharts";
 
 export default function Stats() {
   const [data, setData] = useState([]);
@@ -42,13 +36,9 @@ export default function Stats() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-2">
-        Friendship Analytics
-      </h1>
+      <h1 className="text-4xl font-bold mb-2">Friendship Analytics</h1>
 
-      <p className="text-gray-500 mb-10">
-        By Interaction Type
-      </p>
+      <p className="text-gray-500 mb-10">By Interaction Type</p>
 
       <div className="w-full h-100 bg-gray-300 rounded-2xl shadow p-6">
         <ResponsiveContainer>

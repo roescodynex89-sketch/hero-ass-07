@@ -16,13 +16,13 @@ import {
 } from "react-icons/hi2";
 
 export default function FriendDetails({ params }) {
-  const { id } = React.use(params); // ✅ correct param handling
+  const { id } = React.use(params);
 
   const [friend, setFriend] = useState(null);
   const [loading, setLoading] = useState(true);
-
+  // api call
   useEffect(() => {
-    fetch("/data.json") // ✅ correct public folder fetch
+    fetch("/data.json")
       .then((res) => res.json())
       .then((data) => {
         const found = data.find((f) => f.id == id);
@@ -32,7 +32,6 @@ export default function FriendDetails({ params }) {
   }, [id]);
 
   const handleAction = (type) => {
-    // toast notification
     toast.success(`${type} with ${friend.name} recorded!`);
 
     // timeline save
@@ -54,7 +53,8 @@ export default function FriendDetails({ params }) {
     );
   };
 
-  if (loading) return <div className="text-center py-20">Loading...</div>;
+  if (loading)
+    return <div className="text-center py-20">....Loading.........</div>;
 
   if (!friend)
     return (
@@ -65,17 +65,17 @@ export default function FriendDetails({ params }) {
 
   return (
     <main className="max-w-7xl mx-auto px-4 py-10">
-      {/* Back button */}
+      {/* Back-btn*/}
       <Link
         href="/"
-        className="flex items-center gap-2 text-gray-500 hover:text-emerald-600 mb-8 transition-colors"
+        className="flex items-center gap-2 text-gray-800 hover:text-emerald-600 mb-8 transition-colors"
       >
         <HiOutlineArrowLeft />
         Back to Friends
       </Link>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-        {/* LEFT COLUMN */}
+        {/* Left-side */}
         <div className="flex flex-col items-center text-center p-6 border border-gray-100 rounded-3xl shadow-sm bg-white h-fit">
           <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-emerald-50 mb-4">
             <Image
@@ -89,7 +89,7 @@ export default function FriendDetails({ params }) {
 
           <h1 className="text-2xl font-bold text-gray-900">{friend.name}</h1>
 
-          {/* Status */}
+          {/* condition */}
           <span
             className={`mt-2 inline-block px-3 py-1 rounded-full text-[10px] font-bold text-white uppercase ${
               friend.status === "overdue"
@@ -102,7 +102,6 @@ export default function FriendDetails({ params }) {
             {friend.status}
           </span>
 
-          {/* Tags */}
           <div className="flex flex-wrap justify-center gap-2 mt-3">
             {friend.tags.map((tag, i) => (
               <span
@@ -139,9 +138,9 @@ export default function FriendDetails({ params }) {
           </div>
         </div>
 
-        {/* RIGHT COLUMN */}
+        {/* Right-side */}
         <div className="md:col-span-2 space-y-8">
-          {/* Stats cards */}
+          {/* 3-cards */}
           <div className="grid grid-cols-3 gap-4">
             <div className="bg-gray-50 p-6 rounded-2xl text-center">
               <p className="text-3xl font-bold">{friend.days_since_contact}</p>
@@ -167,7 +166,7 @@ export default function FriendDetails({ params }) {
             </div>
           </div>
 
-          {/* Relationship Goal Card */}
+          {/* Relationship-card */}
           <div className="border border-gray-100 p-6 rounded-2xl flex justify-between items-center shadow-sm">
             <div>
               <h3 className="text-sm font-bold text-emerald-500">
@@ -187,14 +186,14 @@ export default function FriendDetails({ params }) {
             </button>
           </div>
 
-          {/* Quick Check-In Section */}
+          {/* Quick-section */}
           <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm">
-            <h3 className="text-sm font-bold text-emerald-500 mb-8 uppercase tracking-wider">
+            <h3 className="text-sm font-bold text-emerald-500 mb-8 ">
               Quick Check-In
             </h3>
 
             <div className="flex gap-10 md:gap-16">
-              {/* Call Button */}
+              {/* Call-btn*/}
               <button
                 onClick={() => handleAction("Call")}
                 className="group flex flex-col items-center gap-3 cursor-pointer transition-all"
@@ -207,7 +206,6 @@ export default function FriendDetails({ params }) {
                 </span>
               </button>
 
-              {/* Text Button */}
               <button
                 onClick={() => handleAction("Text")}
                 className="group flex flex-col items-center gap-3 cursor-pointer transition-all"
@@ -220,7 +218,6 @@ export default function FriendDetails({ params }) {
                 </span>
               </button>
 
-              {/* Video Button */}
               <button
                 onClick={() => handleAction("Video")}
                 className="group flex flex-col items-center gap-3 cursor-pointer transition-all"

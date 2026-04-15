@@ -35,11 +35,15 @@ export default function Timeline() {
     filter === "All" ? logs : logs.filter((log) => log.type === filter);
 
   const getIcon = (type) => {
-    if (type === "Call") return <HiOutlinePhone size={24} />;
+    if (type === "Call")
+      return <HiOutlinePhone size={24} className="text-emerald-600" />;
 
-    if (type === "Text") return <HiOutlineChatBubbleLeftEllipsis size={24} />;
+    if (type === "Text")
+      return (
+        <HiOutlineChatBubbleLeftEllipsis className="text-blue-600" size={24} />
+      );
 
-    return <HiOutlineVideoCamera size={24} />;
+    return <HiOutlineVideoCamera size={24} className="text-purple-600" />;
   };
 
   return (
@@ -49,7 +53,7 @@ export default function Timeline() {
       <select
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
-        className="border p-2 rounded"
+        className="border p-2 rounded-md  bg-emerald-200  text-sm    "
       >
         <option value="All">All Interactions</option>
         <option value="Call">Call</option>
@@ -57,16 +61,19 @@ export default function Timeline() {
         <option value="Video">Video</option>
       </select>
 
-      <div className="space-y-4 mt-6">
+      <div className="space-y-4 mt-6       ">
         {filteredLogs.length === 0 ? (
           <p className="text-gray-400">No interactions yet</p>
         ) : (
           filteredLogs.map((log, index) => (
-            <div key={index} className="flex gap-4 border p-3 rounded">
+            <div
+              key={index}
+              className="flex gap-4 border border-grey-50    p-3 rounded-2xl"
+            >
               {getIcon(log.type)}
 
               <div>
-                <p>
+                <p className="text-grey-800    font-semibold">
                   {log.type} with {log.name}
                 </p>
 
