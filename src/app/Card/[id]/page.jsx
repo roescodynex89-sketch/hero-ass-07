@@ -22,7 +22,7 @@ export default function FriendDetails({ params }) {
   const [loading, setLoading] = useState(true);
   // api call
   useEffect(() => {
-    fetch("hero-ass-07.vercel.app/data.json")
+    fetch("https://hero-ass-07.vercel.app/data.json")
       .then((res) => res.json())
       .then((data) => {
         const found = data.find((f) => f.id == id);
